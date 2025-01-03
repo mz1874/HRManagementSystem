@@ -1,0 +1,318 @@
+.search-container {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.search-container input {
+    padding-left: 40px;
+}
+
+.search-container i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.announcement-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.form-container {
+    display: flex;
+    gap: 30px;
+}
+
+.btn-action {
+    padding: 0.25rem 1rem;
+    margin-left: 0.5rem;
+}
+
+.pagination {
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modal Styles */
+.modal-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 95%;
+    max-width: 1000px;
+    z-index: 1051;
+    height:90%;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.form-col {
+    flex: 1;
+}
+
+.form-col > input {
+    margin-bottom: 15px;
+}
+
+.checkbox-group {
+    margin-bottom: 10px;
+}
+
+.file-upload {
+    border: 2px dashed #ddd;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.file-upload p {
+    margin: 0;
+    color: #666;
+}
+
+.left-column {
+    flex: 2;  /* Takes up more space than right column */
+}
+
+.right-column {
+    flex: 1;  /* Takes up less space than left column */
+}
+
+.description-textarea {
+    min-height:500px;  /* Makes description box longer */
+    resize: vertical;
+}
+
+.schedule-section {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.date-time-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.date-time-container input {
+    flex: 1;
+}
+
+.department-section {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.submit-container {
+    margin-top: 20px;
+    text-align: right;
+}
+.submit-btn {
+    background-color: #90EE90;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    float: right;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #7ac97a;
+}
+
+
+.announcement-info {
+    padding: 20px;
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-icon {
+    font-size: 40px;
+    color: #6c757d;
+}
+
+.poster-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.poster-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.post-date {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.status-badge {
+    background-color: #28a745;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.announcement-body {
+    margin-bottom: 20px;
+}
+
+.announcement-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.announcement-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.pdf-container {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: none; /* Hidden by default */
+}
+
+.pdf-container.active {
+    display: block;
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* Delete modal (smaller size) */
+.modal_small {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;  /* Increased padding for better spacing */
+    border-radius: 15px;
+    width: 95%;
+    max-width: 550px;
+    text-align: left;
+    z-index: 1051;
+    height: auto;  /* Changed to auto to be more flexible */
+    min-height: 200px;  /* Set minimum height instead of fixed height */
+}
+
+.modal_small .modal-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal_small .modal-buttons {
+    margin-top: 20px;
+}
+
+.modal_small .btn {
+    padding: 8px 20px;
+    margin-left: 10px;
+}
+
+/* Optional: Add some styling for the text */
+.modal_small h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.modal_small p {
+    color: #666;
+    margin-bottom: 0;
+}

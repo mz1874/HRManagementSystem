@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROWY Hardware Sdn Bhd</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/notification_admin.css">
+</head>
+<body>
+    <!-- Sidebar with Logo -->
+    <nav class="sidebar">
+        <div class="logo-container">
+            <img src="/api/placeholder/200/80" alt="ROWY Hardware" class="logo-img">
+        </div>
+        <a href="#" class="nav-item"><i class="fas fa-home me-2"></i> Home</a>
+        <a href="#" class="nav-item"><i class="fas fa-bell me-2"></i> Notification Center</a>
+        <a href="#" class="nav-item"><i class="fas fa-chart-bar me-2"></i> KPI Management</a>
+        <a href="#" class="nav-item"><i class="fas fa-calendar me-2"></i> Leave Application</a>
+        <a href="#" class="nav-item"><i class="fas fa-gift me-2"></i> Reward Mall</a>
+        <a href="#" class="nav-item"><i class="fas fa-trophy me-2"></i> Leaderboard</a>
+        <a href="#" class="nav-item"><i class="fas fa-users me-2"></i> Staff Management</a>
+        <a href="#" class="nav-item"><i class="fas fa-building me-2"></i> Department Management</a>
+        <a href="#" class="nav-item"><i class="fas fa-clipboard me-2"></i> Evaluation Center</a>
+        <a href="#" class="nav-item"><i class="fas fa-cogs me-2"></i> System Management</a>
+    </nav>
+
+    <div class="content-wrapper">
+        <!-- Header -->
+        <header class="header">
+            <div class="d-flex align-items-center me-3">
+                <i class="fas fa-user-circle me-2"></i>
+                <span>username</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Current Announcement</h2>
+                <button class="btn btn-success" onclick="openModal()">New Announcement</button>
+            </div>
+
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+
+            <div class="announcement-card">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5>Welcome to new website</h5>
+                        <p class="mb-0">We're excited to launch our new announcement center. Stay tuned for important updates! Kindly .....</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary btn-action" onclick="openViewModal()" >View</button>                                                        
+                        <button class="btn btn-warning btn-action" onclick="openEditModal()">Edit</button>
+                        <button class="btn btn-danger btn-action">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
+                </ul>
+            </nav>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Press</a>
+                <a href="#">Developers</a>
+                <a href="#">Channels</a>
+                <a href="#">Sport</a>
+                <a href="#">Culture</a>
+                <a href="#">Privacy</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal Backdrop -->
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+
+    <!-- Modal for new announcement -->
+    <div class="modal" id="announcementModal">
+        <div class="modal-header">
+            <h3>New Announcement</h3>
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+        </div>
+        
+        <form id="announcementForm">
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <textarea class="form-control" required></textarea>
+            </div>
+
+            <div class="form-row">
+                <div class="form-col">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="schedulePost">
+                        <label for="schedulePost">Schedule Post</label>
+                    </div>
+                    <input type="date" class="form-control" id="postDate" disabled>
+                    <input type="time" class="form-control" id="postTime" disabled>
+                </div>
+
+                <div class="form-col">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="availableFor">
+                        <label for="availableFor">Available for</label>
+                    </div>
+                    <input type="text" class="form-control" id="department" placeholder="Department" disabled>
+                </div>
+            </div>
+
+            <div class="file-upload">
+                <p>Support pdf and jpg</p>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <!-- Modal for view announcement -->
+    <div class="modal" id="viewAnnouncementModal">
+        <div class="modal-header">
+            <h4 id="viewTitle" class="announcement-title"></h4>
+            <button class="close-btn" onclick="closeViewModal()">&times;</button>
+        </div>
+        
+        <div class="modal-content">
+            <div class="announcement-info">
+                <div class="info-header">
+                    <div class="avatar-section">
+                        <i class="fas fa-user-circle avatar-icon"></i>
+                        <div class="poster-info">
+                            <span class="poster-name">Posted by Admin</span>
+                            <span class="post-date">Posted on <span id="viewPostDate">January 2, 2025</span></span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="announcement-body">
+                    <p id="viewDescription" class="announcement-description"></p>
+                </div>
+    
+                <div id="pdfContainer" class="pdf-container">
+                    <!-- PDF will be embedded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Modal for edit announcement -->
+        <div class="modal" id="editAnnouncementModal">
+            <div class="modal-header">
+                <h3>Edit Announcement</h3>
+                <button class="close-btn" onclick="closeEditModal()">&times;</button>
+            </div>
+            
+            <form id="announcementForm">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" required>
+                </div>
+    
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control" required></textarea>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="schedulePost" disabled>
+                            <label for="schedulePost" >Schedule Post</label>
+                        </div>
+                        <input type="date" class="form-control" id="postDate" disabled>
+                        <input type="time" class="form-control" id="postTime" disabled>
+                    </div>
+    
+                    <div class="form-col">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="availableFor">
+                            <label for="availableFor">Available for</label>
+                        </div>
+                        <input type="text" class="form-control" id="department" placeholder="Department" disabled>
+                    </div>
+                </div>
+    
+                <div class="file-upload">
+                    <p>Support pdf and jpg</p>
+                </div>
+    
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- Modal for delete confirmation -->
+        <div class="modal_small" id="deleteConfirmModal">
+            <div class="modal-content d-flex flex-column h-100">
+                <div class="flex-grow-1">
+                    <h3 class="mb-3">Are you sure?</h3>
+                    <p class="text-muted">This action cannot be undone. This will permanently delete the announcement</p>
+                </div>
+                <div class="modal-buttons d-flex justify-content-end gap-2">
+                    <button class="btn btn-secondary" onclick="closeDeleteModal()">Cancel</button>
+                    <button class="btn btn-success" onclick="confirmDelete()">Delete Announcement</button>
+                </div>
+            </div>
+        </div>
+            
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="js/notification_admin.js"></script>
+</body>
+</html>
