@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROWY Hardware Sdn Bhd</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/reward_mall.css">
+</head>
+<body>
+    <!-- Sidebar with Logo -->
+    <nav class="sidebar">
+        <div class="logo-container">
+            <img src="/api/placeholder/200/80" alt="ROWY Hardware" class="logo-img">
+        </div>
+        <a href="#" class="nav-item"><i class="fas fa-home me-2"></i> Home</a>
+        <a href="#" class="nav-item"><i class="fas fa-bell me-2"></i> Notification Center</a>
+        <a href="#" class="nav-item"><i class="fas fa-chart-bar me-2"></i> KPI Management</a>
+        <a href="#" class="nav-item"><i class="fas fa-calendar me-2"></i> Leave Application</a>
+        <a href="#" class="nav-item"><i class="fas fa-gift me-2"></i> Reward Mall</a>
+        <a href="#" class="nav-item"><i class="fas fa-trophy me-2"></i> Leaderboard</a>
+        <a href="#" class="nav-item"><i class="fas fa-users me-2"></i> Staff Management</a>
+        <a href="#" class="nav-item"><i class="fas fa-building me-2"></i> Department Management</a>
+        <a href="#" class="nav-item"><i class="fas fa-clipboard me-2"></i> Evaluation Center</a>
+        <a href="#" class="nav-item"><i class="fas fa-cogs me-2"></i> System Management</a>
+    </nav>
+
+    <div class="content-wrapper">
+        <!-- Header -->
+        <header class="header">
+            <div class="d-flex align-items-center me-3">
+                <i class="fas fa-user-circle me-2"></i>
+                <span>username</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Reward Mall</h2>
+                <button class="view-history-button">View History</button>
+            </div>
+
+            <button type="button" class="iconButton"> 
+                <span class="buttonText">100</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"/>
+                </svg>
+            </button>
+
+            <div class="row row-cols-md-3 g-4" id="rewardItem">
+                <div class="col">
+                    <div class="card shadow-sm mt-4">
+                        <img src="https://via.placeholder.com/100" alt="Reward Image" class="image">
+                        <div class="card-body">
+                            <h4 class="rewardTitle"><b>Jaya Grocer's Gift Card</b></h4>
+                            <p>RM100 Jaya Grocer's Gift Card. Vouchers received will be valid for a minimum period of 6 months.</p>
+                            <p><b>Valid Until:</b> 30/06/2024, 23:59 </p>
+                            <p><b>Quantity:</b> 20</p>
+                            <p><b>Terms & Conditions: </b>  
+                                <button class="TNCButton" data-bs-toggle="modal" data-bs-target="#termsAndConditionsModal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                                        <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+                                        <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                                    </svg>
+                                </button>
+                            </p>
+                            <button class="rewardButton d-block mx-auto" data-bs-toggle="modal" data-bs-target="#selectRewardModal">50</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View T&C Modal -->
+            <div class="modal fade" id="termsAndConditionsModal">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="header-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                                    <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+                                    <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                                </svg>
+                                <h3>Terms & Conditions</h3>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <li>This gift card is valid for one transaction only and is not redeemable or exchangeable for cash.</li>
+                            <br><li>This gift card is valid at all Jaya Grocer outlets.</li>
+                            <br><li>This gift card is valid for 6 months only from the date of card activation.</li>
+                            <br><li>During the redemption of goods, if the value of the goods is less than the amount on the gift card, no refund will be given for the remaining unused balance. If the value of goods is less than the amount on the gift card, then the difference should be paid by the bearer.</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Selected Reward Confirmation Modal-->
+            <div class="modal fade" id="selectRewardModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="selectRewardModalLabel">Are you sure?</h3>
+                        </div>
+                        <div class="modal-body">
+                            <span class="text-muted">Are you sure you want to redeem this reward? This action cannot be undone.</span>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Press</a>
+                <a href="#">Developers</a>
+                <a href="#">Channels</a>
+                <a href="#">Sport</a>
+                <a href="#">Culture</a>
+                <a href="#">Privacy</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="js/reward_mall.js"></script>
+    
+</body>
+</html>

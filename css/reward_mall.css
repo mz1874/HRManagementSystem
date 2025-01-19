@@ -1,0 +1,93 @@
+.view-history-button {
+    background-color: #ABD3AB;
+    padding: 8px; /* Add padding for better appearance */
+    width: 11%;
+    border: none;
+    border-radius: 30px; /* Make corners curved */
+    cursor: pointer;
+}
+.view-history-button:hover {
+    background-color: #95c395; 
+}
+
+
+.image {
+    border-radius: 0.25rem 0.25rem 0px 0px;
+    margin-bottom: 0.75rem;
+}
+
+.rewardTitle {
+    margin-bottom: 0.75rem;
+}
+
+.card-body p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.TNCButton {
+    background-color: #B8D8F1;
+    border: none;
+    border-radius: 5px;
+    padding: 5px; 
+    cursor: pointer;
+    display: inline-flex; /* Inline-flex for better SVG alignment */
+}
+.TNCButton:hover {
+    background-color: #adcce6; 
+}
+
+.rewardButton{
+    background-color: #ABD3AB;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    padding: 8px; 
+    width: 70%;
+    border: none;
+    border-radius: 15px; 
+    cursor: pointer;
+}
+.rewardButton:hover {
+    background-color: #95c395; 
+}
+
+.iconButton {
+    background-color: white;
+    margin-top: 1.5rem;
+    margin-bottom: 15px;
+    padding: 7px;
+    width: 10%;
+    border-radius: 5px;
+    border: 1px solid #707070;
+    display: flex;              /* Using flexbox to align the content */
+    justify-content: space-between;    /* Centers the text horizontally */
+    align-items: center;        /* Vertically aligns the content */
+}
+.iconButton:hover {
+    background-color: rgb(236, 236, 236); 
+}
+
+.buttonText {
+    text-align: center;         
+    flex-grow: 1;  
+}
+
+.modal {
+    display: none;
+}
+.modal-content {
+    padding: 10px;
+}
+.header-content {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+.header-content h3 {
+    margin: 0; 
+}
+
+#selectRewardModal .modal-header, #selectRewardModal .modal-footer {
+    border: none;
+}

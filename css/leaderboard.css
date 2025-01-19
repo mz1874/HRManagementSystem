@@ -1,0 +1,188 @@
+.podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 30px;
+}
+  
+.podium .podium-block {
+    text-align: center;
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: 1; /* Default z-index */
+}
+
+/* top 3 profile pic, name, point */
+.podium .podium-block img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.name-size {
+    font-size: 24px;
+}
+.point-size {
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+/* first podium */
+.trapezoid-first {
+    border-bottom: 30px solid #FFDF6E;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+    height: 0;
+    width: 250px;
+}
+.podium .podium-block .rectangle-first {
+    background: linear-gradient(to bottom, #FFBD30, #FFE074);
+    height: 270px;
+    width: 250px;
+    z-index: 3; /* Make sure the top podium is always on top */
+}
+.first-size {
+    color: #fff;
+    font-weight: bold;
+    font-size: 80px;
+    padding-top: 10px; /* Adjust as needed */
+}
+
+/* second podium */
+.podium .rotate-left {
+  transform: rotate(-2deg);
+  z-index: 0;
+  margin-right: -1px;
+  margin-bottom: -4px;
+}
+.trapezoid-second {
+    border-bottom: 20px solid #CDCDCD;
+    border-left: 20px solid transparent;
+    height: 0;
+    width: 250px;
+}
+.podium .podium-block .rectangle-second {
+    background: linear-gradient(to bottom, #969696, #DBDBDB);
+    height: 170px;
+    width: 250px;
+    z-index: 2; /* Ensure the second podium stays below the first */
+}
+.second-size {
+    color: #fff;
+    font-weight: bold;
+    font-size: 70px;
+    padding-top:10px; /* Adjust as needed */
+}
+  
+/* third podium */
+.podium .rotate-right {
+    transform: rotate(2deg);
+    z-index: 0; /* Ensure this podium stays behind the middle podium */
+    margin-right: -1px;
+    margin-bottom: -4px;
+}
+.trapezoid-third {
+    border-bottom: 20px solid #ECA64F;
+    border-right: 30px solid transparent;
+    height: 0;
+    width: 250px;
+}
+.podium .podium-block .rectangle-third {
+  background: linear-gradient(to bottom, #D18F3C, #F5BE7A);
+    height: 120px;
+    width: 250px;
+    z-index: 1; /* Make sure the third podium stays at the back */
+}
+.third-size {
+    color: #fff;
+    font-weight: bold;
+    font-size: 60px;
+    padding-top: 10px; 
+}
+
+
+.container .card {
+    background: linear-gradient(to bottom, #CEE7FF, #F0F9FF);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius:  15px;
+}
+.container {
+    width: 80%;
+
+}
+.card {
+  border: none;
+}
+
+/* Leaderboard Header Styling */
+.leaderboard-header {
+  display: flex;
+  margin-bottom: 12px;
+  align-items: center; /* Ensure all elements are vertically aligned */
+}
+.rank-title, .username-title, .point-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #004177;
+  padding-right: 10px;
+}
+.rank-title {
+  flex: 0.18;
+  text-align: left;
+}
+.username-title {
+  flex: 0.5; /* Adjusted to match body flex */
+  text-align: left;
+}
+.point-title {
+  flex: 0.3; /* Adjusted to match body flex */
+  text-align: left;
+}
+
+/* Leaderboard Item Styling */
+.leaderboard-item {
+  display: flex;
+  align-items: center; 
+  background: white;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s ease-in-out; 
+}
+.leaderboard-item:hover {
+  transform: scale(1.05); 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.empty {
+  flex: 0.1;
+}
+.rank, .username, .point {
+  font-size: 1.2rem; 
+  text-align: left;
+  padding-right: 10px;
+}
+
+.rank {
+  flex: 0.2; /* Adjusted to match header */
+  font-weight: bold;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.username {
+  flex: 0.5; /* Adjusted to match header */
+  color: #333;
+}
+
+.point {
+  flex: 0.32; /* Adjusted to match header */
+  color: #333;
+}
+
+
+

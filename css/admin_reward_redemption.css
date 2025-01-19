@@ -1,0 +1,91 @@
+.search-container {
+    margin-bottom: 1rem;
+    width: 100%; /* Ensure form controls take up available width */
+    max-width: 350px; /* Set a fixed maximum width */
+}
+.filter-container {
+    margin-bottom: 2rem;
+}
+
+.form-control, .form-select {
+    border-color: #000000;
+}
+
+.table-card {
+    border: 1px solid #707070;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+}
+.table th,
+.table td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #707070;
+}
+
+.btn-edit, .btn-create {
+    border: none;
+    color: white;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+}
+.btn-edit {
+    background-color: #FFC107;
+}
+.btn-edit:hover {
+    background-color: #e4ac03;
+}
+.btn-create {
+    background-color: #6CBD6C;
+}
+.btn-create:hover {
+    background-color: #5ba25b;
+}
+
+.page-link {
+    border: 1px solid #cccccc;
+}
+.page-item .page-link {
+    color: #008080;
+}
+.page-item.active .page-link {
+    color: #fff;
+    background-color: #008080;
+    border-color: #008080;
+}
+
+/* Styling for Modal */
+.modal {
+    display: none;
+}
+.modal-content {
+    padding: 15px;
+    border-radius: 30px;
+}
+.modal-header, .modal-footer {
+    border: none; 
+}
+.status-exp {
+    color: #7F7F7F;
+}
+.radio-group {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+.radio-box {
+    border: 1px solid #000000; 
+    border-radius: 12px; 
+    padding: 10px;
+    display: flex; 
+    align-items: center;
+}
+.radio-box .form-check-input {
+    margin: 0; 
+    margin-right: 20px; 
+    vertical-align: middle;
+}
+.form-check-input {
+    border: 1px solid #707070; 
+}
