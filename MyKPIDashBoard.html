@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROWY Hardware Sdn Bhd</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/MyKPIDashBoard.css">
+
+</head>
+<body>
+    <!-- Sidebar with Logo -->
+    <nav class="sidebar">
+        <div class="logo-container">
+            <img src="/api/placeholder/200/80" alt="ROWY Hardware" class="logo-img">
+        </div>
+        <a href="#" class="nav-item"><i class="fas fa-home me-2"></i> Home</a>
+        <a href="#" class="nav-item"><i class="fas fa-bell me-2"></i> Notification Center</a>
+        <a href="#" class="nav-item"><i class="fas fa-chart-bar me-2"></i> KPI Management</a>
+        <a href="#" class="nav-item"><i class="fas fa-calendar me-2"></i> Leave Application</a>
+        <a href="#" class="nav-item"><i class="fas fa-gift me-2"></i> Reward Mall</a>
+        <a href="#" class="nav-item"><i class="fas fa-trophy me-2"></i> Leaderboard</a>
+        <a href="#" class="nav-item"><i class="fas fa-users me-2"></i> Staff Management</a>
+        <a href="#" class="nav-item"><i class="fas fa-building me-2"></i> Department Management</a>
+        <a href="#" class="nav-item"><i class="fas fa-clipboard me-2"></i> Evaluation Center</a>
+        <a href="#" class="nav-item"><i class="fas fa-cogs me-2"></i> System Management</a>
+    </nav>
+
+    <div class="content-wrapper">
+        <!-- Header -->
+        <header class="header">
+            <div class="d-flex align-items-center me-3">
+                <i class="fas fa-user-circle me-2"></i>
+                <span>username</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content ">
+            <h2>My KPI DashBoard</h2><br /><br />
+            <div class="row row-center text-center my-4 ">
+                <div class="col-md-3 ">
+                    <div class="p-4 bg-primary text-white">
+                        <h3>Tasks</h3>
+                        <p><b>100</b></p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-4 bg-warning text-white">
+                        <h3>Ongoing</h3>
+                        <p><b>25</b></p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-4 bg-success text-white">
+                        <h3>Done</h3>
+                        <p><b>65</b></p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-4 bg-danger text-white">
+                        <h3>Delayed</h3>
+                        <p><b>10</b></p>
+                    </div>
+                </div>
+            </div><br /><br /><br /><br />
+            <div class="kpi-table-container">
+                <div class="table-header">
+                    <select class="status-filter">
+                        <option>Status</option>
+                        <option>Done</option>
+                        <option>Ongoing</option>
+                        <option>Delayed</option>
+                    </select>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>KPI</th>
+                            <th>Target</th>
+                            <th>Current</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sales Target</td>
+                            <td>RM3,000</td>
+                            <td>RM4,500</td>
+                            <td>2024-10-31</td>
+                            <td><span class="status-badge status-done">Done</span></td>
+                        </tr>
+                        <tr>
+                            <td>Customer Satisfaction</td>
+                            <td>above 90%</td>
+                            <td>87%</td>
+                            <td>2024-12-1</td>
+                            <td><span class="status-badge status-ongoing">Ongoing</span></td>
+                        </tr>
+                        <tr>
+                            <td>New Clients</td>
+                            <td>15</td>
+                            <td>17</td>
+                            <td>2024-10-10</td>
+                            <td><span class="status-badge status-delayed">Delayed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Training Hours</td>
+                            <td>40hrs</td>
+                            <td>33hrs</td>
+                            <td>2024-12-31</td>
+                            <td><span class="status-badge status-ongoing">Ongoing</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Press</a>
+                <a href="#">Developers</a>
+                <a href="#">Channels</a>
+                <a href="#">Sport</a>
+                <a href="#">Culture</a>
+                <a href="#">Privacy</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/MyKPIDashBoard.js"></script>
+</body>
+</html>
