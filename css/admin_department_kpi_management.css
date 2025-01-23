@@ -117,3 +117,21 @@
     font-size: 1.2rem;
     color: #7F7F7F;
 }
+
+/* styling for modal */
+.modal {
+    display: none;
+}
+.modal-content {
+    padding: 15px;
+}
+.form-label {
+    font-weight: bold;
+}
+.form-control {
+    border-color: #000000;
+}
+
+.modal-footer {
+    border-top: none;
+}
