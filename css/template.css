@@ -1,9 +1,17 @@
+/* Ensure viewport scaling */
+@viewport {
+    width: device-width;
+    initial-scale: 1.0;
+}
+
+/* General Layout */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: 'Nunito', sans-serif;
-
+    margin: 0;
+    padding: 0;
 }
 
 .header {
@@ -14,6 +22,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    transition: margin-left 0.3s ease; /* Smooth transition */
 }
 
 .sidebar {
@@ -27,6 +36,11 @@ body {
     padding: 0;
     overflow-y: auto;
     z-index: 1031; /* Higher than header */
+    transition: left 0.3s ease;
+}
+
+.sidebar.show {
+    left: 0;
 }
 
 .logo-container {
@@ -44,18 +58,19 @@ body {
     padding: 2rem;
     flex: 1;
     margin-bottom: 50px;
+    transition: margin-left 0.3s ease; /* Smooth transition */
 }
 
 .nav-item {
     padding: 0.8rem 1rem;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
     text-decoration: none;
     display: block;
 }
 
 .nav-item:hover {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     color: white;
 }
 
@@ -66,8 +81,10 @@ body {
     height: 50px;
     text-align: left;
     margin-left: 250px;
+    flex-shrink: 0;
 }
 
+/* Search box style */
 .search-container {
     position: relative;
     margin-bottom: 2rem;
@@ -84,6 +101,7 @@ body {
     transform: translateY(-50%);
 }
 
+/* Announcement Card */
 .announcement-card {
     border: 1px solid #ddd;
     padding: 1rem;
@@ -91,16 +109,19 @@ body {
     border-radius: 4px;
 }
 
+/* Button Action */
 .btn-action {
     padding: 0.25rem 1rem;
     margin-left: 0.5rem;
 }
 
+/* Pagination */
 .pagination {
     justify-content: center;
     margin-top: 2rem;
 }
 
+/* Footer Links */
 .footer-links {
     display: flex;
     gap: 1rem;
@@ -115,8 +136,74 @@ body {
     font-size: 0.9rem;
 }
 
+/* Content Wrapper */
 .content-wrapper {
     flex: 1;
     display: flex;
     flex-direction: column;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: -250px;
+        height: 100vh;
+        z-index: 1040;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1050;
+        background-color: #004d40;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .header, .main-content, .footer {
+        margin-left: 0;
+    }
+
+    .header {
+        background-color: #004d40;
+        color: white;
+        width: 100%;
+    }
+
+    .footer {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    .sidebar {
+        left: 0;
+    }
+
+    .header {
+        margin-left: 250px;
+    }
+
+    .main-content {
+        margin-left: 250px;
+    }
+
+    .footer {
+        margin-left: 250px;
+    }
 }
